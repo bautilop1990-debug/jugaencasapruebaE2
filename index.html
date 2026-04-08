@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso C4SINO</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src='https://connect.facebook.net/en_US/fbevents.js';
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script');
+
+    // PIXEL CORRECTO
+    fbq('init', '917242417796539'); 
+    fbq('track', 'PageView');
+
+    function trackWhatsAppClick(url) {
+      fbq('track', 'Lead');
+      fbq('trackCustom', 'ClickWhatsApp');
+
+      setTimeout(function(){
+        window.open(url, '_blank');
+      }, 500);
+    }
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=917242417796539&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      background:
+      linear-gradient(rgba(0,10,30,0.85), rgba(0,5,15,0.85)),
+      url("https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=1600&q=80");
+
+      background-size:cover;
+      background-position:center;
+      color:white;
+      overflow:hidden;
+    }
+
+    .card{
+      width:420px;
+      max-width:90%;
+      padding:40px;
+      background: rgba(5, 12, 30, 0.95);
+      border-radius:20px;
+      border:1px solid rgba(0, 242, 255, 0.4);
+      box-shadow:0 0 20px #007bff,0 0 60px rgba(0, 123, 255, 0.4);
+      text-align:center;
+    }
+
+    h1{
+      font-family:'Orbitron',sans-serif;
+      font-size:28px;
+      font-weight:800;
+      letter-spacing:2px;
+      margin-bottom:5px;
+      color:#fff;
+      text-shadow:0 0 10px #00f2ff;
+    }
+
+    .subtitle{
+      font-size:13px;
+      opacity:0.7;
+      margin-bottom:25px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    .question{
+      font-size:20px;
+      font-weight:700;
+      margin-bottom:15px;
+      line-height:1.2;
+      color:#00f2ff;
+    }
+
+    .desc{
+      font-size:15px;
+      opacity:0.85;
+      margin-bottom:30px;
+    }
+
+    .box{
+      border:1px solid rgba(0, 242, 255, 0.3);
+      padding:25px;
+      border-radius:15px;
+      margin-bottom:25px;
+      background: rgba(0, 30, 60, 0.5);
+    }
+
+    .btn{
+      display:inline-block;
+      padding:16px 30px;
+      border-radius:40px;
+      background:linear-gradient(90deg,#007bff,#00f2ff);
+      color:white;
+      font-weight:800;
+      text-decoration:none;
+      margin-top:10px;
+      box-shadow:0 0 20px #00f2ff;
+      transition:0.3s;
+      text-transform:uppercase;
+      cursor:pointer;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 35px #00f2ff;
+    }
+
+    .footer{
+      margin-top:20px;
+      font-family:'Orbitron',sans-serif;
+      font-size:14px;
+      font-weight:700;
+      letter-spacing:3px;
+      opacity:0.8;
+      color:#00f2ff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <h1>ACCESO C4SINO</h1>
+
+    <div class="subtitle">
+      Plataforma • Gestión • Crecimiento
+    </div>
+
+    <div class="question">
+      ¿TU PROVEEDOR TE ESTÁ COMIENDO EL MARGEN?
+    </div>
+
+    <div class="desc">
+      <b>CRECÉ</b> con nosotros y <b>MEJORÁ</b> tu porcentaje<br>
+      Cambiá de proveedor hoy
+    </div>
+
+    <div class="box">
+
+      <p style="margin-bottom:15px;">
+      Conectate con nuestro equipo y optimizá tu estructura dentro del ecosistema C4SINO.
+      </p>
+
+      <a class="btn"
+         onclick="trackWhatsAppClick('https://wa.me/5493329564787?text=Hola,%20vengo%20de%20la%20landing%20y%20quiero%20mejorar%20mi%20porcentaje%20de%20ganancia')">
+         CONTACTAR POR WHATSAPP
+      </a>
+
+    </div>
+
+    <div class="footer">
+      RED MADERO
+    </div>
+
+  </div>
+
+</body>
+</html>
